@@ -20,7 +20,7 @@ public class Main {
         myThread4.setName("Поток 4");
 
         // Создаем пул потоков фиксированного размера
-        final ExecutorService threadPool  =  Executors.newFixedThreadPool(4);
+        final ExecutorService threadPool  =  Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         threadPool.submit(myThread1);
         threadPool.submit(myThread2);
         threadPool.submit(myThread3);
